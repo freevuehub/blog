@@ -7,7 +7,7 @@ Docker Image Build:
   stage: Build
   image: docker:latest
   before_script:
-    - cd /volume1/docker/Freevue-Blog
+    - cd /volume1/docker/Blog-Front
     - git pull origin master
   script:
     - docker build --tag blog/front .
