@@ -17,7 +17,8 @@ ENV HOST 0.0.0.0
 ENV TZ=Asia/Seoul
 
 #가상 머신에 오픈할 포트
-EXPOSE 9000
+# EXPOSE 9000
+EXPOSE 8000
 
 #컨테이너에서 실행될 명령을 지정
-CMD ["yarn", "start"]
+CMD ["yarn", "dev"]
