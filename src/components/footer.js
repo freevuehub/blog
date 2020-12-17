@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   TiSocialTwitter,
   TiSocialLinkedin,
@@ -6,52 +6,36 @@ import {
   TiSocialYoutube,
 } from "react-icons/ti"
 
+const snsMap = (sns) => (
+  <a
+    target="_blank"
+    href={sns.to}
+    rel="noopener noreferrer"
+    key={sns.iconId}
+  >
+    <span className="icon-container" id={sns.iconId}>
+      <sns.component className="footer-social-icon" />
+    </span>
+  </a>
+)
 const Footer = () => {
+  const [snsList] = useState([
+    { to: 'https://twitter.com/', iconId: 'tw-icon', component: TiSocialTwitter },
+    { to: 'https://www.youtube.com/', iconId: 'yt-icon', component: TiSocialYoutube },
+    { to: 'https://www.linkedin.com/', iconId: 'li-icon', component: TiSocialLinkedin },
+    { to: 'https://www.linkedin.com/', iconId: 'fb-icon', component: TiSocialFacebook },
+  ])
+
   return (
     <footer id="footer">
       <div className="container">
         <div className="footer-social">
           <div className="footer-social-text">Follow Us</div>
           <div className="footer-social-icons">
-            <a
-              target="_blank"
-              href="https://twitter.com/"
-              rel="noopener noreferrer"
-            >
-              <span className="icon-container" id="tw-icon">
-                <TiSocialTwitter className="footer-social-icon" />
-              </span>
-            </a>
-            <a
-              target="_blank"
-              href="https://www.youtube.com/"
-              rel="noopener noreferrer"
-            >
-              <span className="icon-container" id="yt-icon">
-                <TiSocialYoutube className="footer-social-icon" />
-              </span>
-            </a>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/"
-              rel="noopener noreferrer"
-            >
-              <span className="icon-container" id="li-icon">
-                <TiSocialLinkedin className="footer-social-icon" />
-              </span>
-            </a>
-            <a
-              target="_blank"
-              href="https://www.facebook.com/"
-              rel="noopener noreferrer"
-            >
-              <span className="icon-container" id="fb-icon">
-                <TiSocialFacebook className="footer-social-icon" />
-              </span>
-            </a>
+            {snsList.map(snsMap)}
           </div>
         </div>
-        <div>© {new Date().getFullYear()} Blog Boost Starter</div>
+        <div><b>FreeVue</b> Copyright © {new Date().getFullYear()}</div>
       </div>
     </footer>
   )
