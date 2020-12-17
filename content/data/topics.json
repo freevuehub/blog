@@ -5,6 +5,11 @@
     "image": "../../static/images/topic1logo.jpg"
   },
   {
+    "name": "Algorithm",
+    "slug": "algorithm",
+    "image": "../../static/images/topic1logo.jpg"
+  },
+  {
     "name": "Topic 1",
     "slug": "topic-1",
     "image": "../../static/images/topic1logo.jpg"
