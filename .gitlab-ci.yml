@@ -1,0 +1,40 @@
+stages:
+  - Build
+  - Setting
+  - Deploy
+
+Docker Image Build:
+  stage: Build
+  image: docker:latest
+  before_script:
+    - cd /volume1/docker/Freevue-Blog
+    - git pull origin master
+  script:
+    - docker build --tag blog/front .
+  only:
+    - tags
+
+Docker Remove Container:
+  stage: Setting
+  image: docker:latest
+  script:
+    - docker stop Blog-Front
+    - docker rm Blog-Front
+  only:
+    - tags
+
+Docker Image Delete:
+  stage: Setting
+  image: docker:latest
+  script:
+    - docker rmi `docker images |  awk '$1 ~ /\<none\>/ {print $3}'`
+  only:
+    - tags
+
+Docker Run Container:
+  stage: Deploy
+  image: docker:latest
+  script:
+    - docker run -d --name=Blog-Front --restart=always -p 19932:3000 blog/front:latest
+  only:
+    - tags
