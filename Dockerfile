@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 
 # /app 디렉토리 생성
 RUN mkdir -p /app
@@ -10,10 +10,11 @@ WORKDIR /app
 ADD . /app
 
 # npm install 을 실행
+RUN yarn global add gatsby-cli
 RUN yarn
 RUN yarn build
 
-# ENV HOST 0.0.0.0
+ENV HOST 0.0.0.0
 ENV TZ=Asia/Seoul
 
 #가상 머신에 오픈할 포트
