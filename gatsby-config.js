@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog Boost Starter`,
+    title: `FreeVue Blog`,
     description: `A Gatsby Netlify CMS powered Blog Starter to boost your development.`,
-    author: `@boostcode`,
+    author: `@freevue`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
