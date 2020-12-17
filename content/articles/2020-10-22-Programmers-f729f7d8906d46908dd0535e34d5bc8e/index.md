@@ -28,7 +28,13 @@ featuredImage: images/title.png
 - 참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.
 - 참가자 중에는 동명이인이 있을 수 있습니다.
 
-[입출력 예](https://www.notion.so/8a8acea6854c49ee8f5bbbe03e490d24)
+### 입출력 예
+
+| participant | completion | return |
+| ----------- | ---------- | ------ |
+| ["leo", "kiki", "eden"] | ["eden", "kiki"] | "leo" |
+| ["marina", "josipa", "nikola", "vinko", "filipa"] | ["josipa", "filipa", "marina", "nikola"] | "vinko" |
+| ["mislav", "stanko", "mislav", "ana"] | ["stanko", "ana", "mislav"] | "mislav" |
 
 ### 입출력 예 설명
 
@@ -58,7 +64,6 @@ function solution(participant, completion) {
 
             break
         }
-
     }
 
     return notCompletion

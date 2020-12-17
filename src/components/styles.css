@@ -25,8 +25,9 @@ a {
   color: black;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
 }
 
 /* Multi-use Components */
@@ -526,6 +527,14 @@ footer {
 }
 .article-title {
   font-weight: 400;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgb(55, 53, 47);
+  padding: 3px 2px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 40px;
+  cursor: text;
 }
 @media (max-width: 840px) {
   #article {
@@ -556,12 +565,147 @@ footer {
     height: auto;
   }
 }
-.article-markdown h2,
-.article-markdown h3 {
+.article-markdown h1 {
+  margin-top: 2em;
+  margin-bottom: 4px;
+  color: rgb(55, 53, 47);
+  font-weight: 600;
+  font-size: 1.875em;
+  line-height: 1.3;
+  fill: inherit;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgb(55, 53, 47);
+  padding: 3px 2px;
+}
+.article-markdown h2 {
   margin-top: 40px;
 }
+.article-markdown h3 {
+  margin-top: 1em;
+  margin-bottom: 1px;
+  color: rgb(55, 53, 47);
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 1.3;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgb(55, 53, 47);
+  padding: 3px 2px;
+}
 .article-markdown p {
-  margin-bottom: 30px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(55, 53, 47);
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgb(55, 53, 47);
+  padding-left: calc(96px + env(safe-area-inset-left));
+  padding-right: calc(96px + env(safe-area-inset-right));
+  padding: 3px 2px;
+  text-indent: 5px;
+}
+.article-markdown ul {
+  padding-left: 28px;
+}
+.article-markdown ul li {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgb(55, 53, 47);
+  padding-left: calc(96px + env(safe-area-inset-left));
+  padding-right: calc(96px + env(safe-area-inset-right));
+  padding: 3px 2px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(55, 53, 47);
+}
+.article-markdown table {
+  border-collapse: collapse;
+  border-top-right-radius: 0.1875rem;
+  border-bottom-right-radius: 0.1875rem;
+  overflow-x: auto;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+.article-markdown table th {
+  border-color: #D7E2EB;
+  background-color: rgba(50,50,144,0.02);
+  color: #263747;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.009em;
+  padding: 0.25rem 0.75rem;
+  vertical-align: middle;
+  border: 1px solid #D7E2EB;
+  min-width: 4rem;
+}
+.article-markdown table td {
+  border-color: #D7E2EB;
+  background-color: rgba(50,50,144,0.02);
+  line-height: 1.6;
+  letter-spacing: -0.009em;
+  padding: 0.25rem 0.75rem;
+  vertical-align: middle;
+  border: 1px solid #D7E2EB;
+  font-size: 16px;
+}
+.article-markdown .gatsby-highlight {
+  border-radius: 3px;
+  text-align: left;
+  position: relative;
+  background: rgb(247, 246, 243);
+  font-size: 16px;
+}
+.article-markdown .gatsby-highlight pre {
+  overflow-x: auto;
+}
+.article-markdown pre code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 85%;
+  tab-size: 2;
+  padding: 34px 16px 32px 32px;
+  min-height: 1em;
+  color: rgb(55, 53, 47);
+  white-space: pre;
+  line-height: 1.5;
+  display: block;
+}
+.article-markdown pre code .token.atrule,
+.article-markdown pre code .token.attr-value,
+.article-markdown pre code .token.keyword {
+  color: #07a;
+}
+.article-markdown pre code .token.function,
+.article-markdown pre code .token.class-name {
+  color: #DD4A68;
+}
+.article-markdown pre code .token.punctuation {
+  color: #999;
+}
+.article-markdown pre code .token.operator,
+.article-markdown pre code .token.entity,
+.article-markdown pre code .token.url,
+.article-markdown pre code .language-css .token.string,
+.article-markdown pre code .style .token.string {
+  color: #9a6e3a;
+  background: hsla(0, 0%, 100%, .5);
+}
+.article-markdown code.language-text {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: normal;
+  background: rgba(135,131,120,0.15);
+  color: #EB5757;
+  border-radius: 3px;
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgb(55, 53, 47);
 }
 #similar-posts-header {
   margin-bottom: 25px;
