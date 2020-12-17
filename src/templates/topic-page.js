@@ -59,7 +59,7 @@ const TopicPageTemplate = ({ pageContext }) => {
   const { edges } = data.allMarkdownRemark
 
   const edgesWithTopic = edges.filter(({ node }) => {
-    return node.frontmatter.tags.includes(topic)
+    return node.frontmatter.category === topic
   })
 
   const topicInfo = data.allTopicsJson.edges.filter(({ node }) => {

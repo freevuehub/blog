@@ -4,7 +4,7 @@ import React from 'react'
 import { FiMenu } from 'react-icons/fi'
 import { MdClose } from 'react-icons/md'
 import Menu from './Menu'
-import SearchBox from './Menu'
+import SearchBox from './SearchBox'
 
 const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
   const data = useStaticQuery(graphql`

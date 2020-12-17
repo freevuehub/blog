@@ -48,10 +48,14 @@ class ArticleTemplate extends Component {
                 </Link>
               ))}
             </div>
-            <Image
-              fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-              className="article-image"
-            ></Image>
+            {
+              post.frontmatter.featuredImage && (
+                <Image
+                  fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+                  className="article-image"
+                ></Image>
+              )
+            }
           </header>
           <div
             className="article-markdown"

@@ -6,10 +6,14 @@ const Card = ({ frontmatter, slug }) => {
   return (
     <figure className="card-styles">
       <Link to={slug}>
-        <Image
-          className="card-image"
-          fluid={frontmatter.featuredImage.childImageSharp.fluid}
-        />
+        {
+          frontmatter.featuredImage && (
+            <Image
+              className="card-image"
+              fluid={frontmatter.featuredImage.childImageSharp.fluid}
+            />
+          )
+        }
       </Link>
 
       <figcaption>
