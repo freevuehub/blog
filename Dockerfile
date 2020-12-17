@@ -13,7 +13,7 @@ ADD . /app
 RUN yarn
 RUN yarn build
 
-ENV HOST 0.0.0.0
+# ENV HOST 0.0.0.0
 ENV TZ=Asia/Seoul
 
 #가상 머신에 오픈할 포트
