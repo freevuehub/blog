@@ -35,6 +35,6 @@ Docker Run Container:
   stage: Deploy
   image: docker:latest
   script:
-    - docker run -d --name=Blog-Front --restart=always -p 19932:3000 blog/front:latest
+    - docker run -d --name=Blog-Front --restart=always -p 19937:9000 blog/front:latest
   only:
     - tags
