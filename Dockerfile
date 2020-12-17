@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:latest
 
 # /app 디렉토리 생성
 RUN mkdir -p /app
