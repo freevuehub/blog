@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-blog-boost",
+  "name": "freevue-blog",
   "private": true,
   "description": "A Gatsby Netlify CMS powered Blog Starter to boost your development.",
   "version": "0.1.0",
@@ -40,7 +40,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
