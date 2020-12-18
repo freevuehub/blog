@@ -35,7 +35,11 @@ featuredImage: ../../../static/images/programmers.jpg
 - 장르에 속한 곡이 하나라면, 하나의 곡만 선택합니다.
 - 모든 장르는 재생된 횟수가 다릅니다.
 
-[입출력 예](https://www.notion.so/5acee5db87334b7da2931c4ffc488e66)
+### 입출력 예
+
+| genres | plays | return |
+| ------ | ----- | ------ |
+| [classic, pop, classic, classic, pop] | [500, 600, 150, 800, 2500] | [4, 1, 3, 0] |
 
 ### 입출력 예 설명
 
