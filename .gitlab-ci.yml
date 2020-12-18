@@ -1,6 +1,3 @@
-default:
-  path: /volume1/docker/Blog-Front
-
 stages:
   - Build
   - Setting
@@ -10,6 +7,7 @@ Gatsby Build:
   stage: Build
   image: node:latest
   before_script:
+    - cd /volume1/docker/Blog-Front
     - git pull origin master
   script:
     - yarn
@@ -26,6 +24,8 @@ Gatsby Kill Nohup:
 
 Gatsby Run Nohup:
   stage: Deploy
+  before_script:
+    - cd /volume1/docker/Blog-Front
   script:
     - nohub yarn serve &
   tags:
