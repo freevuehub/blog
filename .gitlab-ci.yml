@@ -28,5 +28,6 @@ Gatsby Run Nohup:
     - cd /volume1/docker/Blog-Front
   script:
     - nohup yarn serve &
+    - echo "Blog Deployed"
   only:
     - merge_requests
