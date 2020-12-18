@@ -11,7 +11,7 @@ tags:
   - Javascript
   - Programmers
   - Algorithm
-featuredImage: images/title.png
+featuredImage: ../../../static/images/programmers.jpg
 ---
 # 문제
 
