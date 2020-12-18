@@ -1,6 +1,9 @@
 $primary-color: #72abbe;
+$white-color: #fff;
 
+@import './font.scss';
 @import './default.scss';
 @import './header/index.scss';
 @import './footer/index.scss';
 @import './layout.scss';
+@import './main/index.scss';

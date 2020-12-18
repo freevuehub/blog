@@ -1,0 +1,20 @@
+@import './featured.scss';
+
+#archive-link {
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 20px;
+  margin-right: 25px;
+  float: right;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 601px) {
+    &:hover {
+      color: $primary-color;
+      transition: all 0.4s ease;
+    }
+  }
+}
+
+@import './sidebar.scss';
