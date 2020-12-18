@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: 심심해서 해본 React + jQuery
 slug: React-jQuery-a96adb991ed94f7ab3da187b1941967b
-date: 2020-9-28T00:33:46.715Z
-dateModified: 2020-9-28T00:33:46.741Z
+date: 2020-10-13T00:33:46.715Z
+dateModified: 2020-10-13T00:33:46.741Z
 description: this is the fifth test post
 featuredPost: false
 category: devlog
