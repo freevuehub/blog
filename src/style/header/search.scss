@@ -1,0 +1,27 @@
+#search-box {
+  position: relative;
+  form {
+    input {
+      height: 32px;
+      padding: 7px;
+      border: 1px solid rgb(188, 188, 188);
+      border-radius: 4px;
+      font-size: 13px;
+      margin-left: 16px;
+      color: $primary-color;
+      &:focus {
+        outline: $primary-color auto 1px;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    font-size: 20px;
+    color: #686868;
+  }
+  @media (max-width: 840px) {
+    display: none;
+  }
+}

@@ -30,7 +30,7 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
 
   return (
     <header id="header">
-      <div className="container">
+      <div className="inner">
         <button id="site-logo-wrapper" onClick={onLogoClick}>
           <Link
             to="/"
