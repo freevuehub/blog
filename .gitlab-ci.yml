@@ -3,38 +3,22 @@ stages:
   - Setting
   - Deploy
 
-Docker Image Build:
+Gatsby Build:
   stage: Build
-  image: docker:latest
+  image: node:latest
   before_script:
     - cd /volume1/docker/Blog-Front
     - git pull origin master
   script:
-    - docker build --tag blog/front .
-  only:
-    - tags
+    - yarn
+    - yarn build
 
-Docker Remove Container:
+Gatsby Kill Nohup:
   stage: Setting
-  image: docker:latest
   script:
-    - docker stop Blog-Front
-    - docker rm Blog-Front
-  only:
-    - tags
+    - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
 
-Docker Image Delete:
-  stage: Setting
-  image: docker:latest
-  script:
-    - docker rmi `docker images |  awk '$1 ~ /\<none\>/ {print $3}'`
-  only:
-    - tags
-
-Docker Run Container:
+Gatsby Run Nohup:
   stage: Deploy
-  image: docker:latest
   script:
-    - docker run -d --name=Blog-Front --restart=always -p 19937:9000 blog/front:latest
-  only:
-    - tags
+    - nohub yarn serve &
