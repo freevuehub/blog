@@ -27,6 +27,6 @@ Gatsby Run Nohup:
   before_script:
     - cd /volume1/docker/Blog-Front
   script:
-    - nohub yarn serve &
+    - nohup yarn serve &
   tags:
     - Deploy
