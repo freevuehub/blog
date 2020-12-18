@@ -1,0 +1,23 @@
+#footer {
+  background: black;
+  color: white;
+  min-height: 120px;
+  margin-top: 60px;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 120px;
+    max-width: 968px;
+    margin: 0 auto;
+
+    @import './social.scss';
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px 0;
+    .inner {
+      flex-direction: column;
+    }
+  }
+}

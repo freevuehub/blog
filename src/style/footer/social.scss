@@ -1,0 +1,43 @@
+.footer-social {
+  font-size: 18px;
+  font-weight: 700;
+  .footer-social-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 21px;
+  }
+  .footer-social-icons {
+    display: flex;
+    margin-top: 10px;
+    a {
+      display: block;
+      margin-right: 8px;
+      .icon-container {
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        background-color: rgb(68, 66, 74);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        transition: all 0.3s;
+        font-size: 21px;
+
+        @media (min-width: 601px) {
+          &#tw-icon:hover {
+            background-color: #1da1f2;
+          }
+          &#fb-icon:hover {
+            background-color: #3b5999;
+          }
+          &#yt-icon:hover {
+            background-color: #ff0000;
+          }
+          &#li-icon:hover {
+            background-color: #0077b5;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import {
   TiSocialTwitter,
   TiSocialLinkedin,
   TiSocialFacebook,
   TiSocialYoutube,
-} from "react-icons/ti"
+} from 'react-icons/ti'
 
 const snsMap = (sns) => (
   <a
@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <footer id="footer">
-      <div className="container">
+      <div className="inner">
         <div className="footer-social">
           <div className="footer-social-text">Follow Us</div>
           <div className="footer-social-icons">

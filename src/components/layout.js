@@ -1,10 +1,11 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from "./Header.jsx"
-import Footer from "./footer"
-import "./styles.css"
+import Header from './Header.jsx'
+import Footer from './Footer.jsx'
+import './styles.css'
+import '../style/index.scss'
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false)
