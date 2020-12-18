@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import {
-  TiSocialTwitter,
   TiSocialLinkedin,
-  TiSocialFacebook,
   TiSocialYoutube,
 } from 'react-icons/ti'
 
@@ -20,10 +18,18 @@ const snsMap = (sns) => (
 )
 const Footer = () => {
   const [snsList] = useState([
-    { to: 'https://twitter.com/', iconId: 'tw-icon', component: TiSocialTwitter },
-    { to: 'https://www.youtube.com/', iconId: 'yt-icon', component: TiSocialYoutube },
-    { to: 'https://www.linkedin.com/', iconId: 'li-icon', component: TiSocialLinkedin },
-    { to: 'https://www.linkedin.com/', iconId: 'fb-icon', component: TiSocialFacebook },
+    // { to: 'https://twitter.com/', iconId: 'tw-icon', component: TiSocialTwitter },
+    {
+      to: 'https://www.youtube.com/channel/UCkZCZu6eLLDGiuVr5O3awgw',
+      iconId: 'yt-icon',
+      component: TiSocialYoutube,
+    },
+    {
+      to: 'https://www.linkedin.com/in/%EC%84%B1%EC%A4%80-%ED%99%8D-6bb854171/',
+      iconId: 'li-icon',
+      component: TiSocialLinkedin,
+    },
+    // { to: 'https://www.linkedin.com/', iconId: 'fb-icon', component: TiSocialFacebook },
   ])
 
   return (
