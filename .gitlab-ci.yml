@@ -7,18 +7,23 @@ Gatsby Build:
   stage: Build
   image: node:latest
   before_script:
-    - cd /volume1/docker/Blog-Front
     - git pull origin master
   script:
     - yarn
     - yarn build
+  tags:
+    -Deploy
 
 Gatsby Kill Nohup:
   stage: Setting
   script:
     - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
+  tags:
+    -Deploy
 
 Gatsby Run Nohup:
   stage: Deploy
   script:
     - nohub yarn serve &
+  tags:
+    -Deploy
