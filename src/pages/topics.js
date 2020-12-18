@@ -49,7 +49,7 @@ const Topics = () => {
           <Link
             to={`/${topic.fieldValue.toLowerCase().replace(" ", "-")}/`}
             key={topic.fieldValue}
-            className="tag"
+            className="tags"
           >
             <span>
               {topic.fieldValue} ({topic.totalCount})

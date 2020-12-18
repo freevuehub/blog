@@ -35,7 +35,7 @@ class ArticleTemplate extends Component {
             <div className="article-tags">
               {post.frontmatter.tags.map(tag => (
                 <Link
-                  className="tag"
+                  className="tags"
                   key={tag}
                   to={`/${tag
                     .split(" ")
