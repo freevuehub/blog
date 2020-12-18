@@ -12,15 +12,15 @@ Gatsby Build:
   script:
     - yarn
     - yarn build
-  tags:
-    - Deploy
+  only:
+    - merge_requests
 
 Gatsby Kill Nohup:
   stage: Setting
   script:
     - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
-  tags:
-    - Deploy
+  only:
+    - merge_requests
 
 Gatsby Run Nohup:
   stage: Deploy
@@ -28,5 +28,5 @@ Gatsby Run Nohup:
     - cd /volume1/docker/Blog-Front
   script:
     - nohup yarn serve &
-  tags:
-    - Deploy
+  only:
+    - merge_requests
