@@ -1,16 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `FreeVue Blog`,
-    description: `A Gatsby Netlify CMS powered Blog Starter to boost your development.`,
-    author: `@freevue`,
+    title: 'FreeVue Blog',
+    description: 'A Gatsby Netlify CMS powered Blog Starter to boost your development.',
+    author: '@freevue',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-transformer-sharp`,
-    `gatsby-transformer-json`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-catch-links`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify-cms',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-sass',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
