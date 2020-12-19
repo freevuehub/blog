@@ -8,7 +8,7 @@ const topicMap = ({ node }) => (
   </li>
 )
 const Menu = (props) => (
-  <ul class="gmarketsans">
+  <ul className="gmarketsans">
     {props.list.map(topicMap)}
     <li>
       <Link to="/about">About</Link>

@@ -41,7 +41,7 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
           </Link>
         </button>
 
-        <nav id="nav" class="gmarketsans">
+        <nav id="nav" className="gmarketsans">
           <Menu list={data.allTopicsJson.edges} />
           <SearchBox />
           <button className="menu-button" onClick={onMenuClick}>
