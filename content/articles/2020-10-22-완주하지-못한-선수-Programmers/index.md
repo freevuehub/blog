@@ -15,7 +15,7 @@ tags:
 featuredImage: ../../../static/images/programmers.jpg
 ---
 
-# 문제
+## 문제
 
 ### 설명
 
@@ -52,7 +52,7 @@ featuredImage: ../../../static/images/programmers.jpg
 
 - `mislav`는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.
 
-# 풀이
+## 풀이
 
 ```jsx
 function solution(participant, completion) {
@@ -72,7 +72,7 @@ function solution(participant, completion) {
 }
 ```
 
-# 느낀점
+## 느낀점
 
 단순히 문제를 푸는 것을 중심으로 풀면 어렵지 않았습니다. 당연히 금방 풀었고, 모든 케이스에서 통과를 받았습니다. 그런데 문제는 효율성을 하나도 통과를 하지 못했습니다. 그 후로 단순히 문제만 풀면 안되는 것을 알았습니다.
 
