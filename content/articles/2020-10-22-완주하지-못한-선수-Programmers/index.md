@@ -2,9 +2,10 @@
 templateKey: blog-post
 title: 완주하지 못한 선수 - Programmers
 slug: Programmers-f729f7d8906d46908dd0535e34d5bc8e
-date: 2020-10-22T00:33:46.715Z
-dateModified: 2020-10-22T00:33:46.741Z
-description: this is the fifth test post
+date: 2020-10-22T02:30:00.000Z
+dateModified: 2020-10-22T02:30:00.000Z
+description: 프로그래머스 문제 풀이. LV.1 완주하지 못한 선수
+sorce: https://programmers.co.kr/learn/courses/30/lessons/42576
 featuredPost: false
 category: algorithm
 tags:
@@ -13,6 +14,7 @@ tags:
   - Algorithm
 featuredImage: ../../../static/images/programmers.jpg
 ---
+
 # 문제
 
 ### 설명

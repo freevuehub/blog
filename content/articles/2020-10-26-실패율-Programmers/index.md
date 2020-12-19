@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: 실패율 - Programmers
 slug: Programmers-c2d5db46cd014cc8a7e9e6f73e55c9ba
-date: 2020-10-26T00:33:46.715Z
-dateModified: 2020-10-26T00:33:46.741Z
+date: 2020-10-26T13:39:00.000Z
+dateModified: 2020-10-26T13:39:00.000Z
 description: this is the fifth test post
 featuredPost: false
 category: algorithm
