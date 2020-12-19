@@ -1,33 +1,33 @@
-stages:
-  - Build
-  - Setting
-  - Deploy
+# stages:
+#   - Build
+#   - Setting
+#   - Deploy
 
-Gatsby Build:
-  stage: Build
-  image: node:latest
-  before_script:
-    - cd /volume1/docker/Blog-Front
-    - git pull origin master
-  script:
-    - yarn
-    - yarn build
-  only:
-    - merge_requests
+# Gatsby Build:
+#   stage: Build
+#   image: node:latest
+#   before_script:
+#     - cd /volume1/docker/Blog-Front
+#     - git pull origin master
+#   script:
+#     - yarn
+#     - yarn build
+#   only:
+#     - merge_requests
 
-Gatsby Kill Nohup:
-  stage: Setting
-  script:
-    - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
-  only:
-    - merge_requests
+# Gatsby Kill Nohup:
+#   stage: Setting
+#   script:
+#     - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
+#   only:
+#     - merge_requests
 
-Gatsby Run Nohup:
-  stage: Deploy
-  before_script:
-    - cd /volume1/docker/Blog-Front
-  script:
-    - nohup yarn serve &
-    - echo "Blog Deployed"
-  only:
-    - merge_requests
+# Gatsby Run Nohup:
+#   stage: Deploy
+#   before_script:
+#     - cd /volume1/docker/Blog-Front
+#   script:
+#     - nohup yarn serve &
+#     - echo "Blog Deployed"
+#   only:
+#     - merge_requests
