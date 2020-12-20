@@ -9,8 +9,6 @@ Gatsby Build:
   before_script:
     - cd /volume1/docker/Blog-Front
     - git pull origin master
-  rules:
-    - if: '$REPO_NAME == "root"'
   script:
     # - echo "npm install을 시작합니다."
     # - yarn
