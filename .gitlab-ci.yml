@@ -17,7 +17,7 @@ Gatsby Build:
     - echo PWD
     - yarn
   only:
-    - master@app/blog-front
+    - master@root/blog-front
 
 # Gatsby Kill Nohup:
 #   stage: Setting
