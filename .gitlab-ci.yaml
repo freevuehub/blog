@@ -1,6 +1,6 @@
 stages:
   - Build
-  - Setting
+  # - Setting
   # - Deploy
 
 Gatsby Build:
@@ -12,20 +12,22 @@ Gatsby Build:
   rules:
     - if: '$REPO_NAME == "root"'
   script:
-    - echo "npm install을 시작합니다."
-    - yarn
-    - echo "gatsby buld를 시작합니다."
-    - yarn build
+    # - echo "npm install을 시작합니다."
+    # - yarn
+    # - echo "gatsby buld를 시작합니다."
+    # - yarn build
+    - env
+    - echo $REPO_NAME
 
-Gatsby Kill Nohup:
-  stage: Setting
-  rules:
-    - if: '$REPO_NAME == "root"'
-  script:
-    - echo "기존 배포중인 블로그를 정지합니다."
-    - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
-    - echo "작업이 완료되었습니다."
-    - echo "블로그를 실행해주세요."
+# Gatsby Kill Nohup:
+#   stage: Setting
+#   rules:
+#     - if: '$REPO_NAME == "root"'
+#   script:
+#     - echo "기존 배포중인 블로그를 정지합니다."
+#     - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
+#     - echo "작업이 완료되었습니다."
+#     - echo "블로그를 실행해주세요."
 
 # Gatsby Run Nohup:
 #   stage: Deploy
