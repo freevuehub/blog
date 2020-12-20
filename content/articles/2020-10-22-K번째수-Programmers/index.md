@@ -15,7 +15,7 @@ tags:
 featuredImage: ../../../static/images/programmers.jpg
 ---
 
-# 문제
+## 문제
 
 ### 설명
 
@@ -48,7 +48,7 @@ featuredImage: ../../../static/images/programmers.jpg
 - [1, 5, 2, 6, 3, 7, 4]를 4번째부터 4번째까지 자른 후 정렬합니다. [6]의 첫 번째 숫자는 6입니다.
 - [1, 5, 2, 6, 3, 7, 4]를 1번째부터 7번째까지 자릅니다. [1, 2, 3, 4, 5, 6, 7]의 세 번째 숫자는 3입니다.
 
-# 풀이
+## 풀이
 
 ```jsx
 function solution(array, commands) {
