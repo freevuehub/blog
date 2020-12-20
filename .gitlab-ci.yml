@@ -1,7 +1,7 @@
 stages:
   - Build
-  # - Setting
-  # - Deploy
+  - Setting
+  - Deploy
 
 Gatsby Build:
   stage: Build
@@ -10,24 +10,26 @@ Gatsby Build:
     - cd /volume1/docker/Blog-Front
     - git pull origin master
   script:
-    # - echo "npm install을 시작합니다."
-    # - yarn
-    # - echo "gatsby buld를 시작합니다."
-    # - yarn build
-    - echo PWD
     - yarn
+    - yarn build
   only:
     - master@root/blog-front
 
-# Gatsby Kill Nohup:
-#   stage: Setting
-#   rules:
-#     - if: '$REPO_NAME == "root"'
-#   script:
-#     - echo "기존 배포중인 블로그를 정지합니다."
-#     - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
-#     - echo "작업이 완료되었습니다."
-#     - echo "블로그를 실행해주세요."
+Gatsby Kill Nohup:
+  stage: Setting
+  script:
+    - kill 9 `ps -ef | awk '$9 ~ /Blog-Front/ {print $2}'`
+  only:
+    - master@root/blog-front
+
+Gatsby Run Nohup:
+  stage: Deploy
+  before_script:
+    - cd /volume1/docker/Blog-Front
+  script:
+    - yarn serve
+  only:
+    - master@root/blog-front
 
 # Gatsby Run Nohup:
 #   stage: Deploy
