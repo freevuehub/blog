@@ -2,9 +2,10 @@
 templateKey: blog-post
 title: K번째수 - Programmers
 slug: K-Programmers-ae8df6e7c396484b935bacb970b7aef5
-date: 2020-10-22T00:33:46.715Z
-dateModified: 2020-10-22T00:33:46.741Z
-description: this is the fifth test post
+date: 2020-10-22T04:45:00.000Z
+dateModified: 2020-10-22T04:45:00.000Z
+description: 프로그래머스 문제 풀이. LV.1 K번째수
+sorce: https://programmers.co.kr/learn/courses/30/lessons/42748
 featuredPost: false
 category: algorithm
 tags:
