@@ -14,8 +14,10 @@ Gatsby Build:
     # - yarn
     # - echo "gatsby buld를 시작합니다."
     # - yarn build
-    - env
-    - echo $REPO_NAME
+    - echo PWD
+    - yarn
+  only:
+    - master@app/blog-front
 
 # Gatsby Kill Nohup:
 #   stage: Setting
