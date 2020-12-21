@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: 우린 XML로 개발한다.
 slug: XML-ae94d7b5e76e43b79865f6a77405a033
-date: 2020-10-19T00:33:46.715Z
-dateModified: 2020-10-19T00:33:46.741Z
+date: 2020-10-19T03:50:00.000Z
+dateModified: 2020-10-19T03:50:00.000Z
 description: this is the fifth test post
 featuredPost: false
 category: devlog

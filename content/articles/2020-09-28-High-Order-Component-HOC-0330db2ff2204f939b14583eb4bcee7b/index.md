@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: High Order Component (HOC)
 slug: High-Order-Component-HOC-0330db2ff2204f939b14583eb4bcee7b
-date: 2020-9-28T00:33:46.715Z
-dateModified: 2020-9-28T00:33:46.741Z
+date: 2020-09-28T07:09:00.000Z
+dateModified: 2020-09-28T07:09:00.000Z
 description: this is the fifth test post
 featuredPost: false
 category: devlog
