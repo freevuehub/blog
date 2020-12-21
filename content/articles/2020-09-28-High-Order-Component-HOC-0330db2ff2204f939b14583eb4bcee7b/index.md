@@ -56,7 +56,7 @@ const withHoc = (Component) => {
 
 컴포넌트를 그냥 return 하면 컴포넌트여야 하는 것이 아닌가...
 
- 함수로 반환하는 것과 class로 반환하는 것의 차이는 [***여기](https://overreacted.io/ko/how-are-function-components-different-from-classes/)*** (두번 읽어요~)에서 보시면 됩니다. 두개의 차이점이 아주 잘 정리되어 있어서 어떤 형식을 사용할지 정해서 사용하면 됩니다.
+ 함수로 반환하는 것과 class로 반환하는 것의 차이는 [***여기***](https://overreacted.io/ko/how-are-function-components-different-from-classes/) (두번 읽어요~)에서 보시면 됩니다. 두개의 차이점이 아주 잘 정리되어 있어서 어떤 형식을 사용할지 정해서 사용하면 됩니다.
 
 꼭 `class`와 `function`의 차이를 알고 `HOC`로 만들 것!!
 
