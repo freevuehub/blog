@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'FreeVue Blog',
-    description: 'A Gatsby Netlify CMS powered Blog Starter to boost your development.',
+    description: '안녕하세요. 프론트엔드 개발자 FreeVue입니다.',
     author: '@freevue',
   },
   plugins: [
