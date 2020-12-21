@@ -94,3 +94,22 @@
     }
   }
 }
+
+/* Topics Page Styles */
+.topic-page-header {
+  max-width: 968px;
+  margin: 100px auto 10px;
+  h1 {
+    text-transform: capitalize;
+  }
+  .topic-page-image {
+    width: 90px;
+    height: 90px;
+    display: none;
+
+    @media (max-width: 600px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

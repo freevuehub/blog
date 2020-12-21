@@ -3,12 +3,14 @@
 #archive-link {
   font-size: 16px;
   line-height: 30px;
-  margin-top: 20px;
   margin-right: 25px;
   float: right;
   display: flex;
   align-items: center;
 
+  @media (max-width: 840px) {
+    margin-bottom: 30px;
+  }
   @media (min-width: 601px) {
     &:hover {
       color: $primary-color;
