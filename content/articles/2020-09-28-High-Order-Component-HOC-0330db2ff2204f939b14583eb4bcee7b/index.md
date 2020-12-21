@@ -4,7 +4,7 @@ title: High Order Component (HOC)
 slug: High-Order-Component-HOC-0330db2ff2204f939b14583eb4bcee7b
 date: 2020-09-28T07:09:00.000Z
 dateModified: 2020-09-28T07:09:00.000Z
-description: this is the fifth test post
+description: React에서 있어보이는 단어 중 하나 HOC에 대하여...
 featuredPost: false
 category: devlog
 tags:

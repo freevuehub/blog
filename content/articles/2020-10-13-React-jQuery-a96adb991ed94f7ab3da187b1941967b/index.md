@@ -4,7 +4,7 @@ title: 심심해서 해본 React + jQuery
 slug: React-jQuery-a96adb991ed94f7ab3da187b1941967b
 date: 2020-10-13T03:49:00.000Z
 dateModified: 2020-10-13T03:49:00.000Z
-description: this is the fifth test post
+description: 업무 시간 중 심심해서 이상한 짓을 했습니다.
 featuredPost: false
 category: devlog
 tags:

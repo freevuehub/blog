@@ -4,7 +4,7 @@ title: Typescript 기본 사용법
 slug: Typescript-기본-사용법
 date: 2020-10-08T02:48:00.000Z
 dateModified: 2020-10-08T02:48:00.000Z
-description: this is the fifth test post
+description: Typescript가 얼마나 어렵냐면...
 featuredPost: false
 category: devlog
 tags:

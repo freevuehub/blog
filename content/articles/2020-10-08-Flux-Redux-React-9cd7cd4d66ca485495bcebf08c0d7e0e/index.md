@@ -4,7 +4,7 @@ title: Flux 패턴인 Redux가 React에 미친 영향
 slug: Flux-Redux-React-9cd7cd4d66ca485495bcebf08c0d7e0e
 date: 2020-10-08T06:52:00.000Z
 dateModified: 2020-10-08T06:52:00.000Z
-description: this is the fifth test post
+description: Redux가 React에 왜 필요했을까?
 featuredPost: false
 category: devlog
 tags:

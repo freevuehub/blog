@@ -4,7 +4,7 @@ title: 2019년을 정리하며
 slug: 2019년을-정리하며
 date: 2019-12-31T14:57:00.000Z
 dateModified: 2019-12-31T14:57:00.000Z
-description: this is the fifth test post
+description: 2019년이 갔습니다. 1년동안 무슨 일이 있었냐면...
 featuredPost: false
 category: devlog
 tags:
