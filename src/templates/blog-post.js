@@ -62,7 +62,7 @@ class ArticleTemplate extends Component {
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
 
-          <div>
+          <div className="another-posts">
             {similarPosts.length > 0 && (
               <h3 id="similar-posts-header">
                 Other {this.props.pageContext.topic} Tutorials
