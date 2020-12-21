@@ -6,3 +6,6 @@
     border-radius: 10px;
   }
 }
+@function primary-color-opacity($opacity: 100) {
+  @return #{$primary-color}#{$opacity};
+}
