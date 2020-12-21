@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { FaAngleDoubleRight } from "react-icons/fa"
 
-import Card from "../components/card"
+import Card from '../components/Card.jsx'
 import CardSmall from "../components/cardSmall"
 
 function TagPageTemplate({ pageContext }) {

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import Card from "../components/card"
+import Card from '../components/Card.jsx'
 import CardSmall from "../components/cardSmall"
 import Layout from "../components/layout"
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa"

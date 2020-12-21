@@ -1,5 +1,5 @@
 import React from "react"
-import Card from "./card"
+import Card from './Card.jsx'
 import CardSmall from "./cardSmall"
 
 const Search = ({ markdown, query }) => {

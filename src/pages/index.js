@@ -4,7 +4,7 @@ import { FaAngleDoubleRight } from "react-icons/fa"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Card from "../components/card"
+import Card from '../components/Card.jsx'
 import CardSmall from "../components/cardSmall"
 import Featured from "../components/featured"
 import Search from "../components/search"

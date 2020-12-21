@@ -4,8 +4,8 @@ import Image from "gatsby-image"
 
 const Card = ({ frontmatter, slug }) => {
   return (
-    <figure className="card-styles">
-      <Link to={slug}>
+    <Link to={slug}>
+      <figure className="card-styles">
         {
           frontmatter.featuredImage && (
             <Image
@@ -14,17 +14,13 @@ const Card = ({ frontmatter, slug }) => {
             />
           )
         }
-      </Link>
 
-      <figcaption>
-        <Link to={`/${frontmatter.category.toLowerCase().replace(" ", "-")}`}>
+        <figcaption>
           <div className="card-topic">{frontmatter.category}</div>
-        </Link>
-        <Link to={slug}>
           <h3>{frontmatter.title}</h3>
-        </Link>
-      </figcaption>
-    </figure>
+        </figcaption>
+      </figure>
+    </Link>
   )
 }
 export default Card

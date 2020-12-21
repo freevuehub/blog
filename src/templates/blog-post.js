@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "gatsby-image"
 import SEO from "../components/seo"
-import Card from "../components/card"
+import Card from '../components/Card.jsx'
 
 class ArticleTemplate extends Component {
   render() {
