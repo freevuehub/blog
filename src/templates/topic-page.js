@@ -60,7 +60,7 @@ const TopicPageTemplate = ({ pageContext }) => {
 
   const edgesWithTopic = edges.filter(({ node }) => {
     return node.frontmatter.category === topic
-  })
+  }).reverse()
 
   const topicInfo = data.allTopicsJson.edges.filter(({ node }) => {
     return node.slug === topic.toLowerCase().replace(" ", "-")
