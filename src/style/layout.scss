@@ -101,6 +101,35 @@
   }
 }
 
+/* Small Cards Styles (Sidebar) */
+.card-small-styles {
+  display: flex;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  .card-small-image {
+    @include newmopism-card(10px);
+
+    width: 104px;
+    height: 58.5px;
+    margin-right: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .card-small-topic {
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  @media (min-width: 601px) {
+    &:hover {
+      h3 {
+        color: $primary-color;
+        transition: all 0.4s ease;
+      }
+    }
+  }
+}
+
 /* Topics Page Styles */
 .topic-page-header {
   max-width: 968px;
