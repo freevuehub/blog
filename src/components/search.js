@@ -28,8 +28,11 @@ const Search = ({ markdown, query }) => {
     <div>
       <div>
         <h2 className="page-header">
-          {filteredPosts.length > 0 ? "Search results " : "No results "}
-          for "<strong>{query.replace("%20", " ")}</strong>"
+          {
+            filteredPosts.length > 0
+              ? `"${query.replace("%20", " ")}"에 대한 검색결과`
+              : '검색결과가 없습니다.'
+          }
         </h2>
         <div className="flex-layout">
           <div className="cards">
