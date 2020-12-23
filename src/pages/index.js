@@ -10,7 +10,7 @@ import Featured from "../components/featured"
 import Search from "../components/search"
 
 const allArticlesMap = ({ node }, index) => {
-  return index >= 3 ? (
+  return 3 <= index && index < 10 ? (
     <Card
       key={node.id}
       slug={node.fields.slug}
