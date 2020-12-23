@@ -37,4 +37,10 @@ code {
   .token.deleted {
     color: #905;
   }
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
 }
