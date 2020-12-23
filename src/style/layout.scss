@@ -9,6 +9,12 @@
   }
 }
 
+.page-header {
+  max-width: 968px;
+  margin: 100px auto 10px;
+  font-size: 32px;
+}
+
 .flex-layout {
   display: flex;
   max-width: 968px;
@@ -138,10 +144,4 @@
       color: $primary-color;
     }
   }
-}
-
-.page-header {
-  margin: 102px 0 42px 0;
-  font-size: 32px;
-  font-weight: 400;
 }
