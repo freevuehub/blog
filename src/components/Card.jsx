@@ -1,28 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Image from 'gatsby-image'
+import Images from './Images.jsx'
 
 const Card = ({ frontmatter, slug }) => {
   return (
     <Link to={slug} className="card-styles">
       <div>
-        {
-          frontmatter.featuredImage && (
-            <Image
-              className="card-image"
-              fluid={frontmatter.featuredImage.childImageSharp.fluid}
-            />
-          )
-        }
+        <Images
+          className="card-image"
+          featuredImage={frontmatter.featuredImage}
+        />
       </div>
       <div>
         <span className="card-topic">{frontmatter.category}</span>
         <h3>{frontmatter.title}</h3>
       </div>
-      {/* <figure className="card-styles">
-        <figcaption>
-        </figcaption>
-      </figure> */}
     </Link>
   )
 }
