@@ -13,5 +13,10 @@
     "name": "Document",
     "slug": "document",
     "image": "../../static/images/topic1logo.jpg"
+  },
+  {
+    "name": "Tutorial",
+    "slug": "tutorial",
+    "image": "../../static/images/topic1logo.jpg"
   }
 ]
