@@ -8,7 +8,7 @@ const SearchBox = () => {
 
     const value = event.target.query.value.toLowerCase()
 
-    navigate(`/?s=${value}`)
+    navigate(`/search?word=${value}`)
   }
 
   return (

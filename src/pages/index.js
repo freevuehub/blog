@@ -5,9 +5,7 @@ import { FaAngleDoubleRight } from 'react-icons/fa'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Card from '../components/Card.jsx'
-import CardSmall from '../components/cardSmall'
 import Featured from '../components/featured'
-import Search from '../components/search'
 import ContactMail from '../components/ContactMail'
 import RightSidePostList from '../components/RightSidePostList'
 import { queryofAllPostList } from '../gql'
@@ -22,24 +20,43 @@ const allArticlesMap = ({ node }, index) => {
   ) : null
 }
 const IndexPage = (props) => {
-  const data = useStaticQuery(queryofAllPostList())
-  const [queryType, query] = props.location.search.split("=")
+  const data = useStaticQuery(graphql`{
+    tagsGroup: allMarkdownRemark(limit: 100) {
+      group(field: frontmatter___tags) {
+        fieldValue
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            category
+            tags
+            featuredPost
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }`
+  )
   const { edges } = data.allMarkdownRemark
   const posts = edges.filter(({ node }) => {
     return node.frontmatter.featuredPost
   })
-
-  if (queryType === "?s" && query.length > 0) {
-    return (
-      <Layout>
-        <Search
-          markdown={data.allMarkdownRemark}
-          tagsGroup={data.tagsGroup}
-          query={query}
-        />
-      </Layout>
-    )
-  }
 
   return (
     <Layout>
