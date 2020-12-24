@@ -5,7 +5,7 @@ slug: XML-ae94d7b5e76e43b79865f6a77405a033
 date: 2020-10-19T03:50:00.000Z
 dateModified: 2020-10-19T03:50:00.000Z
 description: JSX가 있었기에 React가 대박날 수 있었다.
-featuredPost: false
+featuredPost: true
 category: devlog
 tags:
   - React

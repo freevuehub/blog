@@ -5,7 +5,7 @@ slug: Flux-Redux-React-9cd7cd4d66ca485495bcebf08c0d7e0e
 date: 2020-10-08T06:52:00.000Z
 dateModified: 2020-10-08T06:52:00.000Z
 description: Redux가 React에 왜 필요했을까?
-featuredPost: false
+featuredPost: true
 category: devlog
 tags:
   - React
