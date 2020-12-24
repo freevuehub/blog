@@ -2,13 +2,13 @@ import React from "react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 
-const Featured = ({ markdown }) => {
-  if (!markdown) {
+const Featured = ({ markdown, list }) => {
+  if (!list.length) {
     return <div>...loading</div>
   } else {
     return (
       <div id="featured">
-        {markdown.edges.map(({ node }, index) => {
+        {list.map(({ node }, index) => {
           if (index === 0) {
             return (
               <figure
@@ -17,9 +17,13 @@ const Featured = ({ markdown }) => {
               >
                 <Link to={node.fields.slug}>
                   <div className="featured-overlay"></div>
-                  <Image
-                    fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
-                  />
+                  {
+                    node.frontmatter.featuredImage && (
+                      <Image
+                        fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+                      />
+                    )
+                  }
                   <figcaption>
                     <h2>{node.frontmatter.title}</h2>
                     <span>{node.frontmatter.category}</span>
@@ -51,4 +55,5 @@ const Featured = ({ markdown }) => {
     )
   }
 }
+
 export default Featured
