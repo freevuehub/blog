@@ -6,17 +6,15 @@ const RightSidePostList = (props) => {
     <>
       <h2 className="sidebar-header">{props.title}</h2>
       <div>
-        {props.list.map(({ node }, index) => {
-          if (2 < index && index < 5) {
-            return (
-              <CardSmall
-                key={node.id}
-                slug={node.fields.slug}
-                frontmatter={node.frontmatter}
-              />
-            )
-          } else return null
-        })}
+        {
+          props.list.map(({ node }) => (
+            <CardSmall
+              key={node.id}
+              slug={node.fields.slug}
+              frontmatter={node.frontmatter}
+            />
+          ))
+        }
       </div>
     </>
   )

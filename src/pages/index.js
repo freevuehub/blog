@@ -5,21 +5,18 @@ import { FaAngleDoubleRight } from 'react-icons/fa'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Card from '../components/Card.jsx'
-import Featured from '../components/featured'
+import Featured from '../components/Featured.jsx'
 import ContactMail from '../components/ContactMail'
 import RightSidePostList from '../components/RightSidePostList'
-import { queryofAllPostList } from '../gql'
 
-const allArticlesMap = ({ node }, index) => {
-  return 3 <= index && index < 10 ? (
-    <Card
-      key={node.id}
-      slug={node.fields.slug}
-      frontmatter={node.frontmatter}
-    />
-  ) : null
-}
-const IndexPage = (props) => {
+const allArticlesMap = ({ node }) => (
+  <Card
+    key={node.id}
+    slug={node.fields.slug}
+    frontmatter={node.frontmatter}
+  />
+)
+const IndexPage = () => {
   const data = useStaticQuery(graphql`{
     tagsGroup: allMarkdownRemark(limit: 100) {
       group(field: frontmatter___tags) {
@@ -54,18 +51,24 @@ const IndexPage = (props) => {
   }`
   )
   const { edges } = data.allMarkdownRemark
-  const posts = edges.filter(({ node }) => {
-    return node.frontmatter.featuredPost
+  const featuredPosts = edges.filter(({ node }, index) => {
+    return node.frontmatter.featuredPost && index < 3
   })
+  const articlesPosts = edges.filter(({ node }, index) => {
+    return node.frontmatter.featuredPost && (3 <= index && index < 10)
+  })
+  const algorithmPosts = edges.filter(({ node }) => {
+    return node.frontmatter.category === 'algorithm'
+  }).splice(0, 5)
 
   return (
     <Layout>
       <SEO title="Home" slug="/" />
-      <Featured list={posts} markdown={data.allMarkdownRemark} />
+      <Featured list={featuredPosts} markdown={data.allMarkdownRemark} />
       <div className="flex-layout main">
         <div className="cards">
           <h2 id="articles-title">Articles</h2>
-          {posts.map(allArticlesMap)}
+          {articlesPosts.map(allArticlesMap)}
           <Link to="/archive/2" id="archive-link">
             More Articles
             <FaAngleDoubleRight className="icon-right" />
@@ -73,7 +76,7 @@ const IndexPage = (props) => {
         </div>
         <div className="sidebar">
           <ContactMail />
-          <RightSidePostList title="Algorithm Posts" list={edges} />
+          <RightSidePostList title="Algorithm Posts" list={algorithmPosts} />
         </div>
       </div>
       <br />
