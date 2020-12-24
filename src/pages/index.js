@@ -75,7 +75,7 @@ const IndexPage = () => {
           </Link>
         </div>
         <div className="sidebar">
-          <ContactMail />
+          {/* <ContactMail /> */}
           <RightSidePostList title="Algorithm Posts" list={algorithmPosts} />
         </div>
       </div>
