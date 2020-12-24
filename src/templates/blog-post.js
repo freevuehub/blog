@@ -65,7 +65,7 @@ class ArticleTemplate extends Component {
           <div className="another-posts">
             {similarPosts.length > 0 && (
               <h3 id="similar-posts-header">
-                Other {this.props.pageContext.topic} Tutorials
+                {this.props.pageContext.topic}의 다른 글
               </h3>
             )}
 
